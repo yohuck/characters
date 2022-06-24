@@ -1,0 +1,233 @@
+:root {
+    --option1: 'Calistoga', cursive;
+    --option2: 'Rampart One', cursive;
+    --option3: 'Yuji Syuku', serif;
+    --option4: 'Girassol', cursive;
+
+    --dnd-blue: #30699E;
+    --dnd-yellow: #E8DE49;
+    --dnd-orange: #b65219;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* main {
+    width: 100vw;
+} */
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--option1);
+    text-align: center;
+    color: var(--dnd-yellow);
+    background: rgb(48,105,158);
+    background: linear-gradient(90deg, rgba(48,105,158,0.9) 13%, rgba(182,82,25,0.9) 91%);
+    background-size: 500%;
+    background-position: 220%;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+.wrapper {
+    position: relative ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 5rem 5rem; */
+    background-color: var(--dnd-blue);
+    border-radius: 5px;
+    /* border: #b65219 solid ; */
+    height: 100vh;
+    max-width: 350px;
+    max-height: 620px;
+    filter: drop-shadow(4px 4px 2px #3f3f3f);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    /* margin: 0 auto; */
+    /* overflow: hidden; */
+
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+    position: relative;
+    padding: 2rem;
+    overflow: hidden;
+    max-width: 480px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-family: var(--option4);
+    color: var(--dnd-yellow);
+    margin-top: 0.5em;
+    line-height: 3rem;
+    max-width: 425px;
+}
+
+header h2 {
+    font-size: 1rem;
+    font-family: var(--option3);
+    color: #b65219;
+
+}
+
+.button {
+    border: none;
+    padding: 0.5rem;
+    color: var(--dnd-orange);
+    background-color: var(--dnd-yellow);
+    width: 120%;
+    /* margin: 1rem 0; */
+    position: absolute;
+    z-index: 5;
+    transform: rotate(-35deg) translate(-24%, -280%) ;
+    font-size: 0.8rem;
+    
+}
+
+
+.generator {
+    border: 3px solid rgb(243, 245, 218);
+    width: 100%;
+    /* padding: 0.8rem; */
+    border-radius: 5px;
+    margin-top: 1rem;
+    overflow: hidden;
+    max-width: 330px;
+}
+
+.generator h3 {
+    font-size: 3rem;
+    line-height: 6.5rem;
+    font-family: var(--option1);
+}
+
+
+
+
+.thing  {
+    width: 200%;
+    /* background-color: #b65219; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--dnd-blue); */
+
+}
+
+.thing-reverse  {
+    width: 200%;
+    /* background-color: #b65219; */
+    display: flex;
+    /* background-color: var(--dnd-blue); */
+    transform: translate(-50%, 0);
+}
+
+.thing p {
+    font-size: 1.5rem;
+}
+
+.moveLeft {
+    transform: translate(-50%, 0);
+    transition-duration: 0.5s;
+}
+
+.thing:not(:hover) {
+    /* transform: translate(-50%, 0); */
+    transition-duration: 1s;
+}
+.thing-reverse:hover {
+    /* transform: translate(0%, 0); */
+    transition-duration: 0.5s;
+}
+
+.thing-reverse:not(:hover) {
+    /* transform: translate(-50%, 0); */
+    transition-duration: 1s;
+    /* transition-timing-function: ease-in-out; */
+}
+
+.thing h3 {
+    width: 100%;
+    max-width: 350px;
+}
+
+.thing-reverse h3 {
+    width: 100%;
+    max-width: 350px;
+}
+
+.thing p {
+    width: 100%;
+    /* max-width: 350px;
+    background-color: #b65219; */
+    /* height: 6.5rem; */
+}
+
+.thing-reverse p {
+    width: 100%;
+    max-width: 150px;
+}
+
+.results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--dnd-orange); */
+}
+
+footer {
+    margin: 1em;
+}
+
+#thingTag-2  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.thing, .thing-reverse {
+    min-height: 120px;
+}
+
+/* Copy this @keyframes block to your CSS*/
+@keyframes yourAnimation {
+0.0%{
+transform: scale(1) translate(50px, 0) skew(15deg);
+} 55.3%{
+    transform: scale(2) translate(100px, -10px) skew(-6deg);
+}
+99.6% {
+transform: scale(3) translate(-100px, 0) skew(0deg);
+}
+    }
+    
+    
+    /* Add the animation: property to whichever element you want to animate */
+    #elementToAnimate{
+    animation: yourAnimation 2s ease 0s infinite normal forwards;
+    }
+
+    img {
+    position:absolute;
+    width: 50px;
+
+    }
